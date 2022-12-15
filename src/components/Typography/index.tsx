@@ -1,12 +1,22 @@
 import { css } from "@emotion/react";
 
-const typographyCss = css({
-  color: "red",
-  border: "1px solid black",
-});
+type TypographyType = {
+  children: React.ReactNode;
+  size: number;
+  color: string;
+};
 
-function Typography() {
-  return <div css={typographyCss}>"hihdfdfdfi"</div>;
+function Typography({ children, size, color }: TypographyType): JSX.Element {
+  return (
+    <div
+      css={css({
+        color: color,
+        fontSize: size,
+      })}
+    >
+      {children}
+    </div>
+  );
 }
 
 export default Typography;

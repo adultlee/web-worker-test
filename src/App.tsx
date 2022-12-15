@@ -3,7 +3,9 @@ import Typography from "./components/Typography";
 function App() {
   return (
     <div className="App">
-      <Typography />
+      <Typography size={16} color="red">
+        hihi
+      </Typography>
       "hihi"
     </div>
   );
